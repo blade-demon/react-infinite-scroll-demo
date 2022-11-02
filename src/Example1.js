@@ -14,7 +14,6 @@ function Example1() {
       if (intObserver.current) intObserver.current.disconnect();
 
       intObserver.current = new IntersectionObserver((posts) => {
-        debugger;
         if (posts[0].isIntersecting && hasNextPage) {
           console.log("We are near the last post!");
           setPageNum((prev) => prev + 1);
